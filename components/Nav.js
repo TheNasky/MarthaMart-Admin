@@ -13,6 +13,7 @@ export default function Nav({ show }) {
    async function logout() {
       await router.push("/");
       await signOut();
+      localStorage.setItem("loginState", "false");
    }
    return (
       <aside
